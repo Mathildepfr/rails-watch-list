@@ -1,5 +1,16 @@
-<%= simple_form_for [ @list, @bookmark ] do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :movie,  as: :radio_buttons %>
-  <%= f.submit "Submit", class: "btn btn-primary" %>
-<% end %>
+
+<div class="banner" style="background-image: url(https://images.unsplash.com/photo-1578674473215-9e07ee2e577d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQ4fHxtb3ZpZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60)">
+  <div class="container">
+  </div>
+</div>
+
+<div class="new-bookmarks">
+  <div class="new-bookmark">
+    <h1>Create a new <strong>list</strong> !</h1>
+    <%= simple_form_for [ @list, @bookmark ] do |f| %>
+      <%= f.input :comment %>
+      <%= f.association :movie,  as: :radio_buttons %>
+      <%= f.submit "Submit", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

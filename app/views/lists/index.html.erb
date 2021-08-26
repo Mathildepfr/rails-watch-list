@@ -8,8 +8,11 @@
   </div>
 </div>
 
-<div class="container">
-  <h1>My Lists</h1>
+<div class="container-list">
+  <div class="list-text">
+    <h3>My Lists</h3>
+    <%= link_to 'Create a new list', new_list_path(@list), class: "btn btn-success" %>
+  </div>
 
   <div class="lists">
     <% @lists.each do |list| %>
@@ -17,6 +20,5 @@
     <% end %>
   </div>
 
-<%= link_to 'Create a new list', new_list_path(@list) %>
 
 </div>

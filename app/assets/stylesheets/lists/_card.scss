@@ -3,13 +3,84 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.container-list {
+  display: grid;
+  flex-grow: 1;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
 .list-card {
+  display: flex;
   height: 200px;
-  width: 300px;
-  margin: 5px;
+  width: 90%;
+  margin: 4%;
+  padding: 2%;
+  background-color: hsl(0, 0%, 98%);
   background-position: center;
   background-size: cover;
-    a {
-      text-align: center;
-    }
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 6px;
+  box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.137);
+}
+
+.list-card a {
+  font-size: 60%;
+}
+
+.new-lists {
+  display: grid;
+  flex-grow: 1;
+  margin: 20px;
+  background-color: hsl(0, 0%, 98%);
+  padding: 5%;
+  box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.137);
+  border-radius: 4px;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.new-list {
+  justify-self: center
+}
+
+.list-text {
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+  padding-bottom: 0;
+}
+
+.list-text h3 {
+  font-size: 20px;
+}
+
+.new-list a {
+  color: black;
+}
+
+.new-bookmarks {
+  display: grid;
+  flex-grow: 1;
+  margin: 20px;
+  background-color: hsl(0, 0%, 98%);
+  padding: 5%;
+  box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.137);
+  border-radius: 4px;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.new-bookmark {
+  justify-self: center
+}
+
+.new-bookmark a {
+  color: black;
 }

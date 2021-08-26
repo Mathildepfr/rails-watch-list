@@ -1,17 +1,26 @@
-<h1><%= @list.name %></h1>
-<p>
-  <ul class="list-group">
-  <% @bookmarks.each do |bookmark| %>
-    <li class="list-group-item"><%= bookmark.comment %> - <%= bookmark.movie.title %>
-    <%= link_to "Remove",
-                  bookmark_path(bookmark),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %></li>
-  <% end %>
-</ul>
-</p>
-<br>
-<%= link_to 'Create a bookmark', new_list_bookmark_path(@list) %>
-<br>
-<%= link_to 'Back', lists_path %> |
-<%= link_to 'Create a new list', new_list_path(@list) %>
+<div class="banner" style="background-image: url(https://images.unsplash.com/photo-1578674473215-9e07ee2e577d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQ4fHxtb3ZpZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60)">
+  <div class="container">
+  </div>
+</div>
+
+<div class="new-lists">
+  <div class="new-list">
+    <h1><%= @list.name %></h1>
+    <p>
+      <ul class="list-group">
+      <% @bookmarks.each do |bookmark| %>
+        <li class="list-group-item"><%= bookmark.comment %> - <%= bookmark.movie.title %>
+        <%= link_to "Remove",
+                      bookmark_path(bookmark),
+                      method: :delete,
+                      data: { confirm: "Are you sure?" } %></li>
+      <% end %>
+    </ul>
+    </p>
+    <br>
+    <%= link_to 'Create a bookmark', new_list_bookmark_path(@list) %>
+    <br>
+    <%= link_to 'Back', lists_path %> |
+    <%= link_to 'Create a new list', new_list_path(@list) %>
+  </div>
+</div>
