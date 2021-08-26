@@ -1,0 +1,15 @@
+.lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.list-card {
+  height: 200px;
+  width: 300px;
+  margin: 5px;
+  background-position: center;
+  background-size: cover;
+    a {
+      text-align: center;
+    }
+}
