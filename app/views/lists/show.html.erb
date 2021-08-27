@@ -1,8 +1,8 @@
 <div class="banner" style="background-image: url(https://images.unsplash.com/photo-1578674473215-9e07ee2e577d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQ4fHxtb3ZpZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60)">
+</div>
 <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
   <div class="container">
   </div>
-</div>
 
 
 <div class="movie-cards">
@@ -31,4 +31,8 @@
   <br>
   <%= link_to 'Back', lists_path %>
   <%= link_to 'Create a new list', new_list_path(@list) %>
+  <%= button_to "Delete list",
+                      list_path(@list),
+                      method: :delete,
+                      data: { confirm: "Are you sure?" } %></div>
 </div>
