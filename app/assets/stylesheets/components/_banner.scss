@@ -6,6 +6,14 @@
   text-align: center;
 }
 
+.banner-list {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 300px;
+  text-align: center;
+}
+
 .banner h1 {
   margin: 0;
   color: white;
@@ -19,4 +27,11 @@
   color: rgb(54, 49, 49);
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.banner-list h3 {
+  color: white;
+  text-align: center;
+  font-size: 400%;
+  font-weight: bold;
 }

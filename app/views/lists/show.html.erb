@@ -1,29 +1,30 @@
-<div class="banner" style="background-image: url(https://images.unsplash.com/photo-1578674473215-9e07ee2e577d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQ4fHxtb3ZpZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60)">
+<div class="banner-list" style="background-image: url('<%= cl_image_path(@list.photo.key) if @list.photo.attached? %>')">
+<h3><%= @list.name %></h3>
+<%= link_to 'Add a movie', new_movie_path(@movie), class: "btn btn-success"  %>
 </div>
-<%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
-  <div class="container">
-  </div>
 
 
 <div class="movie-cards">
   <div class="list-text">
-    <h3><%= @list.name %></h3>
+    <h3>My Bookmarks</h3>
     <%= link_to 'Create a bookmark', new_list_bookmark_path(@list), class: "btn btn-success"  %>
   </div>
   <div class="movie-card">
       <% @bookmarks.each do |bookmark| %>
         <div class="list-group-item">
-        <h4><strong><%= bookmark.movie.title %></strong></h4>
-        <%= bookmark.movie.overview %>
-        <br><br>
-        <em><%= bookmark.comment %></em>
-        <br><br>
-        <%= bookmark.movie.rating %>
-        <br><br>
-        <%= button_to "Remove",
-                      bookmark_path(bookmark),
-                      method: :delete,
-                      data: { confirm: "Are you sure?" } %></div>
+        <%= image_tag bookmark.movie.poster_url, class:"poster-img" %>
+        <div class="movie-card-text">
+          <h4><strong><%= bookmark.movie.title %> • <%= bookmark.movie.rating %><i class="fas fa-star star-yellow"></i></strong></h4>
+          <%= bookmark.movie.overview %>
+          <br><br>
+          <div class="comment-delete">
+            <p><em>"<%= bookmark.comment %>"</em></p>
+            <%= link_to "Delete",
+                          bookmark_path(bookmark),
+                          method: :delete,
+                          data: { confirm: "Are you sure?" } %></div>
+          </div>
+        </div>
       <% end %>
     <br>
   </div>

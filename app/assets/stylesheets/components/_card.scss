@@ -22,8 +22,28 @@
   margin: 2%;
 }
 
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 100px) and (max-width: 768px) {
+  .movie-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 767px) and (max-width: 992px) {
+  .movie-card {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .movie-cards a {
   color: black;
+}
+
+.movie-card .poster-img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
 }
 
 .movie-cards btn {
@@ -32,4 +52,17 @@
 
 .movie-cards .list-group-item {
   margin: 2%;
+  box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.137);
+  height: 350px;
+  padding: 0;
+  text-align: left;
+}
+
+.movie-card-text {
+  padding: 4%;
+}
+
+.comment-delete {
+  display: flex;
+  justify-content: space-between;
 }
