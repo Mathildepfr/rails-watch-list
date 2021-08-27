@@ -20,7 +20,7 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
     @movie.destroy
 
-    redirect_to list_path(@list)
+    redirect_to movies_path
   end
 
   private
