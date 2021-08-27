@@ -3,24 +3,31 @@
   </div>
 </div>
 
-<div class="new-lists">
-  <div class="new-list">
-    <h1><%= @list.name %></h1>
-    <p>
-      <ul class="list-group">
+
+<div class="movie-cards">
+  <div class="list-text">
+    <h3><%= @list.name %></h3>
+    <%= link_to 'Create a bookmark', new_list_bookmark_path(@list), class: "btn btn-success"  %>
+  </div>
+  <div class="movie-card">
       <% @bookmarks.each do |bookmark| %>
-        <li class="list-group-item"><%= bookmark.comment %> - <%= bookmark.movie.title %>
-        <%= link_to "Remove",
+        <div class="list-group-item">
+        <h4><strong><%= bookmark.movie.title %></strong></h4>
+        <%= bookmark.movie.overview %>
+        <br><br>
+        <em><%= bookmark.comment %></em>
+        <br><br>
+        <%= bookmark.movie.rating %>
+        <br><br>
+        <%= button_to "Remove",
                       bookmark_path(bookmark),
                       method: :delete,
-                      data: { confirm: "Are you sure?" } %></li>
+                      data: { confirm: "Are you sure?" } %></div>
       <% end %>
-    </ul>
-    </p>
     <br>
-    <%= link_to 'Create a bookmark', new_list_bookmark_path(@list) %>
-    <br>
-    <%= link_to 'Back', lists_path %> |
-    <%= link_to 'Create a new list', new_list_path(@list) %>
   </div>
+
+  <br>
+  <%= link_to 'Back', lists_path %>
+  <%= link_to 'Create a new list', new_list_path(@list) %>
 </div>
