@@ -8,6 +8,7 @@
     <h1>Create a new <strong>list</strong> !</h1>
     <%= simple_form_for(@list) do |f| %>
       <%= f.input :name %>
+      <%= f.input :photo, as: :file %>
       <%= f.submit "Submit", class: "btn btn-success" %>
     <% end %>
   </div>
