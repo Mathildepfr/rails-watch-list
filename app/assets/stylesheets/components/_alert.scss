@@ -9,3 +9,9 @@
   width: 30%;
   color: white;
 }
+
+@media (max-width: 660px) {
+  .btn {
+    width: 60%;
+  }
+}

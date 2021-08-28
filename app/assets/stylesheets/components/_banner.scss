@@ -22,6 +22,12 @@
   font-weight: bold;
 }
 
+@media (min-width: 100px) and (max-width: 790px) {
+  .banner h1 {
+    font-size: 180%;
+  }
+}
+
 .banner p {
   font-size: 20px;
   color: rgb(54, 49, 49);
