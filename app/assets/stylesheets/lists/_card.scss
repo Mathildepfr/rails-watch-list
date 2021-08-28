@@ -82,8 +82,24 @@
   padding-bottom: 0;
 }
 
+.list-text a {
+  color: white;
+}
+
+@media (max-width: 950px) {
+  .list-text a {
+    font-size: 60%;
+  }
+}
+
 .list-text h3 {
-  font-size: 20px;
+  font-size: 160%;
+}
+
+@media (max-width: 950px) {
+  .list-text h3 {
+    font-size: 90%;
+  }
 }
 
 .new-list a {

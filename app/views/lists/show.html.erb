@@ -15,8 +15,7 @@
         <%= image_tag bookmark.movie.poster_url, class:"poster-img" %>
         <div class="movie-card-text">
           <h4><strong><%= bookmark.movie.title %> • <%= bookmark.movie.rating %><i class="fas fa-star star-yellow"></i></strong></h4>
-          <%= bookmark.movie.overview %>
-          <br><br>
+          <p><%= bookmark.movie.overview %></p>
           <div class="comment-delete">
             <p><em>"<%= bookmark.comment %>"</em></p>
             <%= link_to "Delete",
