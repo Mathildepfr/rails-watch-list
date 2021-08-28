@@ -12,15 +12,13 @@
         <% @movies.each do |movie| %>
           <div class="list-group-item">
           <%= image_tag movie.poster_url, class:"poster-img" %>
-          <div class="movie-card-text">
-            <h4><strong><%= movie.title %> • <%= movie.rating %><i class="fas fa-star star-yellow"></i></strong></h4>
-            <%= movie.overview %>
-            <br><br>
-            <div class="comment-delete">
+            <div class="movie-card-text">
+              <h4><strong><%= movie.title %> • <%= movie.rating %><i class="fas fa-star star-yellow"></i></strong></h4>
+              <p class="overflow-ellipsis"><%= movie.overview %></p>
               <%= link_to "Delete",
-                            movie_path(movie),
-                            method: :delete,
-                            data: { confirm: "Are you sure?" } %></div>
+                        movie_path(movie),
+                        method: :delete,
+                        data: { confirm: "Are you sure?" } %>
             </div>
           </div>
         <% end %>

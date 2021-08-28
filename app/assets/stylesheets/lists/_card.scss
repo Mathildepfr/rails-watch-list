@@ -3,6 +3,20 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 100px) and (max-width: 768px) {
+  .lists {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 767px) and (max-width: 992px) {
+  .lists {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .container-list {
   display: grid;
   flex-grow: 1;
@@ -43,6 +57,18 @@
   text-align: center;
   width: 50%;
   margin: 0 auto;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+@media (min-width: 100px) and (max-width: 790px) {
+  .new-lists {
+    grid-template-columns: 1fr;
+    width: 90%;
+    h1 {
+          font-size: 200%;
+    }
+  }
 }
 
 .new-list {
