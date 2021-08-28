@@ -15,13 +15,15 @@
             <div class="movie-card-text">
               <h4><strong><%= movie.title %> • <%= movie.rating %><i class="fas fa-star star-yellow"></i></strong></h4>
               <p class="overflow-ellipsis"><%= movie.overview %></p>
-              <%= link_to "Delete",
-                        movie_path(movie),
-                        method: :delete,
-                        data: { confirm: "Are you sure?" } %>
+              <div class="show-delete">
+                <%= link_to "See more", movie_path(movie) %>
+                <%= link_to "Delete",
+                              movie_path(movie),
+                              method: :delete,
+                              data: { confirm: "Are you sure?" } %>
+              </div>
             </div>
           </div>
         <% end %>
-        <br>
   </div>
 </div>

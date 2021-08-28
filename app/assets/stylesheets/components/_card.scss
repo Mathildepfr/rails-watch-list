@@ -64,10 +64,7 @@
       overflow: hidden;
     }
     a {
-      color: lightpink;
-      position: absolute;
       bottom: 5%;
-      right: 5%;
     }
 }
 
@@ -89,4 +86,27 @@
 
 .overflow-ellipsis {
   text-overflow: ellipsis;
+}
+
+.card-show-movie {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+    img {
+      width: 100%;
+    }
+}
+
+.card-show-movie-text {
+  padding: 4%;
+  text-align: left;
+  height: 50%;
+}
+
+.show-delete {
+  display: flex;
+  justify-content: space-between;
 }

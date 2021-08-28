@@ -16,8 +16,10 @@
         <div class="movie-card-text">
           <h4><strong><%= bookmark.movie.title %> • <%= bookmark.movie.rating %><i class="fas fa-star star-yellow"></i></strong></h4>
           <p><%= bookmark.movie.overview %></p>
-          <div class="comment-delete">
-            <p><em>"<%= bookmark.comment %>"</em></p>
+          <p><em>"<%= bookmark.comment %>"</em></p>
+
+          <div class="show-delete">
+            <%= link_to "See more", movie_path(bookmark.movie) %>
             <%= link_to "Delete",
                           bookmark_path(bookmark),
                           method: :delete,
