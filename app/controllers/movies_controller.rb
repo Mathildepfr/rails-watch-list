@@ -10,7 +10,7 @@ class MoviesController < ApplicationController
   def create
     @movie = Movie.new(movie_params)
     if @movie.save
-      redirect_to root_path
+      redirect_to movies_path
     else
       render :new
     end
